@@ -18,8 +18,16 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd final-project
+<<<<<<< HEAD
             git pull
             docker build -t final-app .
             docker stop app || true
             docker rm app || true
             docker run -d -p 8080:80 --name app final-app
+=======
+            sudo git pull
+            sudo docker build -t final-app .
+            sudo docker stop app || true
+            sudo docker rm app || true
+            sudo docker run -d -p 80:80 --name app final-app
+>>>>>>> 3d1e63cd8ddabb88c830a44df036f6152a77c03a
