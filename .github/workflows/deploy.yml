@@ -18,7 +18,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd final-project
-
             sudo git pull
             sudo docker build -t final-app .
             sudo docker stop app || true
